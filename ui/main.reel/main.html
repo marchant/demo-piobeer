@@ -14,6 +14,19 @@
                 "helloElement": {"#": "hello"}
             }
         },
+        "text1": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "text1"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true",
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@textField.value"}
+            }
+        },
         "textField": {
             "prototype": "digit/ui/text-field.reel",
             "properties": {
@@ -25,7 +38,7 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
-        <h1></h1>
+        <h1 data-montage-id="text1"></h1>
         <span data-montage-id="hello">
             Hello
         </span>
